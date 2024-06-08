@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+
 const Titulo = ({ texto, numero, saludar }) => {
+
+  useEffect(()=> {
+
+    //cleanup effect
+    return () => {
+      console.log("Desmontando titulo...")
+    }
+  }, [])
+
   return (
     <div>
       <p>{texto}</p>
