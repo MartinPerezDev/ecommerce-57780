@@ -1,5 +1,6 @@
 //traer todos los productos
 const getProducts = () => {
+
   return fetch("http://localhost:8080/api/productos")
     .then((respuesta) => respuesta.json())
     .then((data) => {
