@@ -1,40 +1,120 @@
 const productos = [
   {
     id: "Adff21",
-    nombre: "Producto 1",
-    descripcion: "Descripcion 1",
+    nombre: "Purina Excellent Maintenance",
+    descripcion: "La selección de un alimento adecuado para tu mascota es muy importante para garantizar su crecimiento, desarrollo y salud. Con esta opción de Excellent podrás cubrir las necesidades nutricionales y energéticas de tu perro.",
     stock: 5,
-    categoria: "hamburguesas",
-    imagen: "/img/hamburguesa.jpg",
-    precio: 200
+    categoria: "mascotas",
+    imagen: "/img/purina.webp",
+    precio: 430
   },
   {
     id: "Gjmn222",
-    nombre: "Producto 2",
-    descripcion: "Descripcion 2",
+    nombre: "Soga Juguete Para Perros",
+    descripcion: "SOGA JUGUETE PARA PERROS 2 NUDOS PURO ALGODÓN 20 CM. Puro algodón, muy resistente y no daña a su perro. Favorece la limpieza e higiene de la dentadura de su mascota.",
     stock: 10,
-    categoria: "helados",
-    imagen: "https://th.bing.com/th/id/R.5275fd24bae5d6f9ddb83d82cfa72feb?rik=Y9aYKgn3g5sblg&riu=http%3a%2f%2fheladosydeliciasbotanasyalgomass.files.wordpress.com%2f2013%2f05%2fpostre-en-cono-con-helado-de-fresa-y-frutas-frescas-como-fresa-y-moras-azules-ice-cream-cone-with-strawberries.jpg&ehk=B7flGMxWwYCiQF%2bL4E%2bSYsvogM%2b0UyvcQktqVsPBLzE%3d&risl=&pid=ImgRaw&r=0",
+    categoria: "mascotas",
+    imagen: "/img/soga.webp",
     precio: 150
   },
   {
     id: "Lom222",
-    nombre: "Producto 3",
-    descripcion: "Descripcion 3",
+    nombre: "Juguete Pelota Para Perros",
+    descripcion: "GIGWI BALL SQUEAKER en tonalidades rojo y púrpura en su versión mediana. Este juguete combina funcionalidad y estilo, siendo un elemento de entretenimiento para tu compañero canino y una muestra de calidad y diseño refinado.",
     stock: 2,
     categoria: "mascotas",
-    imagen: "https://th.bing.com/th/id/OIP.4SsKFAsz_O3JesFuyVcFUwHaHa?rs=1&pid=ImgDetMain",
+    imagen: "/img/pelota.webp",
     precio: 300
+  },
+  {
+    id: "Htm123",
+    nombre: "Pedigree Rodeo Snacks",
+    descripcion: "Pedigree® RODEO™ es el snack perfecto para recompensar a tu perro y demostrarle tu afecto. Disponible también en sabor Pollo y otros snacks de la gama Pedigree® para tu mascota.",
+    stock: 3,
+    categoria: "mascotas",
+    imagen: "/img/snack.webp",
+    precio: 100
+  },
+  {
+    id: "Jfw222",
+    nombre: "Agua Mineralizada sin Gas",
+    descripcion: "Pedigree® RODEO™ es el snack perfecto para recompensar a tu perro y demostrarle tu afecto. Disponible también en sabor Pollo y otros snacks de la gama Pedigree® para tu mascota.",
+    stock: 1,
+    categoria: "bebidas",
+    imagen: "/img/agua.webp",
+    precio: 120
+  },
+  {
+    id: "Gtm222",
+    nombre: "Gaseosa Pepsi Black",
+    descripcion: "Pedigree® RODEO™ es el snack perfecto para recompensar a tu perro y demostrarle tu afecto. Disponible también en sabor Pollo y otros snacks de la gama Pedigree® para tu mascota.",
+    stock: 3,
+    categoria: "bebidas",
+    imagen: "/img/pepsi.webp",
+    precio: 140
+  },
+  {
+    id: "Gtm221",
+    nombre: "Energizante Monster Energy",
+    descripcion: "Pedigree® RODEO™ es el snack perfecto para recompensar a tu perro y demostrarle tu afecto. Disponible también en sabor Pollo y otros snacks de la gama Pedigree® para tu mascota.",
+    stock: 3,
+    categoria: "bebidas",
+    imagen: "/img/monster.webp",
+    precio: 160
+  },
+  {
+    id: "Gtm566",
+    nombre: "Jugo Cepita Naranja",
+    descripcion: "Pedigree® RODEO™ es el snack perfecto para recompensar a tu perro y demostrarle tu afecto. Disponible también en sabor Pollo y otros snacks de la gama Pedigree® para tu mascota.",
+    stock: 5,
+    categoria: "bebidas",
+    imagen: "/img/cepita.jpeg",
+    precio: 110
+  },
+  {
+    id: "Tmy543",
+    nombre: "Alfajor Triple Milka Mousse",
+    descripcion: "Pedigree® RODEO™ es el snack perfecto para recompensar a tu perro y demostrarle tu afecto. Disponible también en sabor Pollo y otros snacks de la gama Pedigree® para tu mascota.",
+    stock: 6,
+    categoria: "kiosco",
+    imagen: "/img/milka.webp",
+    precio: 70
+  },
+  {
+    id: "Tmy545",
+    nombre: "Alfajor Block Cofler",
+    descripcion: "Pedigree® RODEO™ es el snack perfecto para recompensar a tu perro y demostrarle tu afecto. Disponible también en sabor Pollo y otros snacks de la gama Pedigree® para tu mascota.",
+    stock: 7,
+    categoria: "kiosco",
+    imagen: "/img/cofler.jpeg",
+    precio: 75
+  },
+  {
+    id: "Tmy546",
+    nombre: "Gomitas Arcor Mogul Rollo",
+    descripcion: "Pedigree® RODEO™ es el snack perfecto para recompensar a tu perro y demostrarle tu afecto. Disponible también en sabor Pollo y otros snacks de la gama Pedigree® para tu mascota.",
+    stock: 30,
+    categoria: "kiosco",
+    imagen: "/img/mogul.webp",
+    precio: 20
+  },
+  {
+    id: "Tmy547",
+    nombre: "Gomitas Mogul Ladrillos",
+    descripcion: "Pedigree® RODEO™ es el snack perfecto para recompensar a tu perro y demostrarle tu afecto. Disponible también en sabor Pollo y otros snacks de la gama Pedigree® para tu mascota.",
+    stock: 15,
+    categoria: "kiosco",
+    imagen: "/img/mogul-ladrillos.webp",
+    precio: 25
   }
 ]
 
 const obtenerProductos = () => {
-  return new Promise( (resolve, reject) => {
-    //simulamos un retraso de red de 3 segundos
-    setTimeout(()=>{
+  return new Promise((resolve, reject) => {
+    //simulamos un retraso de red de 2 segundos
+    setTimeout(() => {
       resolve(productos)
-    }, 3000)
-
+    }, 2000)
   })
 }
 
