@@ -1,9 +1,21 @@
 import { CartContext } from "../../context/CartContext"
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 
 const Carrito = () => {
 
   const { carrito, borrarProductoPorId, vaciarCarrito, precioTotal } = useContext(CartContext)
+
+  //Early Return, Return temprano
+
+  if(carrito.length === 0){
+    return(
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <h2>No hay productos en el carrito 😥</h2>
+        <Link to="/" >Ver productos</Link>
+      </div>
+    )
+  }
 
   return (
     <div>

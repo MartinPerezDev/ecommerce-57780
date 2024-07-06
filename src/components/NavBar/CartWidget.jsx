@@ -8,10 +8,12 @@ const CartWidget = () => {
 
   const { cantidadTotal } = useContext(CartContext)
 
+  let cantidad = cantidadTotal()
+
   return (
     <Link to="/carrito" className="cartwidget">
-      <BsBagDash size={35} />
-      <p>{ cantidadTotal() }</p>
+      <BsBagDash size={35} className={ cantidad > 0 ? "carritoVerde" : "carritoRojo" } />
+      <p>{ cantidad > 0 && cantidad }</p>
     </Link>
   )
 }

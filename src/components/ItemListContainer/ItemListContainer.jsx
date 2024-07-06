@@ -7,10 +7,14 @@ import "./ItemListContainer.css"
 
 const ItemListContainer = ({ saludo }) => {
   const [productos, setProductos] = useState([]);
+  const [estaCargando, setEstaCargando] = useState(false)
 
   const { idCategoria } = useParams()
 
   useEffect(() => {
+    //mostramos la pantalla de carga
+    setEstaCargando(true)
+
     obtenerProductos()
       .then((respuesta) => {
         if(idCategoria){
@@ -26,14 +30,18 @@ const ItemListContainer = ({ saludo }) => {
         console.log(error);
       })
       .finally(() => {
-        console.log("finalizo la promesa");
+        //ocultamos la pantalla de carga
+        setEstaCargando(false)
       });
+
   }, [idCategoria]);
 
   return (
     <div className="itemlistcontainer">
       <h2>{saludo}</h2>
-      <ItemList productos = {productos} />
+      {
+        estaCargando ? <div>Cargando...</div> : <ItemList productos = {productos} />
+      }
     </div>
   );
 };
