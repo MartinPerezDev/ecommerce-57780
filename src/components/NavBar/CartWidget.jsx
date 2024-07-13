@@ -12,7 +12,7 @@ const CartWidget = () => {
 
   return (
     <Link to="/carrito" className="cartwidget">
-      <BsBagDash size={35} className={ cantidad > 0 ? "carritoVerde" : "carritoRojo" } />
+      <BsBagDash size={35} />
       <p>{ cantidad > 0 && cantidad }</p>
     </Link>
   )

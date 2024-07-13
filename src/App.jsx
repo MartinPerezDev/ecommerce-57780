@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./components/Ejemplos/Error";
 import { CartProvider } from "./context/CartContext";
 import Carrito from "./components/Carrito/Carrito";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
           <Route path="/detalle/:idProducto" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<Carrito />} />
+          <Route path="/checkout" element={<Checkout />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
