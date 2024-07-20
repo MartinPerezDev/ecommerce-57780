@@ -3,6 +3,10 @@ import Formulario from "./Formulario";
 import { CartContext } from "../../context/CartContext";
 import db from "../../db/db.js";
 import { collection, addDoc } from "firebase/firestore";
+import validateForm from "../../utils/validacionFormulario.js";
+import { toast } from "react-toastify";
+
+import "./Checkout.css"
 
 const Checkout = () => {
   const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
@@ -17,7 +21,7 @@ const Checkout = () => {
     setDatosForm({ ...datosForm, [event.target.name]: event.target.value });
   };
 
-  const enviarOrden = (event) => {
+  const enviarOrden = async(event) => {
     event.preventDefault();
     //formatear correctamente la orden
     const datos = {
@@ -25,8 +29,13 @@ const Checkout = () => {
       productos: [...carrito],
       total: precioTotal(),
     };
-
-    subirOrden(datos);
+    //validar formulario antes de subir la orden
+    const response = await validateForm(datosForm)
+    if(response.status === "success"){
+      subirOrden(datos);
+    }else{
+      toast.warn(response.message)
+    }
   };
 
   const subirOrden = (datos) => {
@@ -41,7 +50,7 @@ const Checkout = () => {
   };
 
   return (
-    <div>
+    <div className="checkout">
       {idOrden ? (
         <div>
           <h2>Orden generada con exito!! 😁</h2>

@@ -12,6 +12,7 @@ const ItemListContainer = ({ saludo }) => {
 
   const { idCategoria } = useParams();
 
+  //esta funcion nos trae todos los productos desde firebase
   const obtenerProductos = () => {
     const productosRef = collection(db, "productos");
     getDocs(productosRef).then((respuesta) => {

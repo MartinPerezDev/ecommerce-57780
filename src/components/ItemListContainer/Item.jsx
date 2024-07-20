@@ -8,7 +8,7 @@ const Item = ({ producto }) => {
         <p>{producto.nombre}</p>
         <p>precio: ${producto.precio}</p>
 
-        <Link to={"/detalle/" + producto.id } style={{color: "lime"}} >Ver detalles</Link>
+        <Link to={"/detalle/" + producto.id }>Ver detalles</Link>
       </div>
     </div>
   );
